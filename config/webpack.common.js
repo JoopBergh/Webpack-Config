@@ -1,6 +1,7 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
+const path = require('path');
 const paths = require('./paths');
 
 module.exports = {
@@ -20,7 +21,6 @@ module.exports = {
     }),
   ],
 
-
   module: {
     rules: [
       {
@@ -33,6 +33,12 @@ module.exports = {
             },
           },
           'css-loader',
+          {
+            loader: "postcss-loader",
+            options: {
+              postcssOptions: { config: path.resolve(__dirname, './postcss.config.js') },
+            },
+          },
           'sass-loader',
         ],
       },
