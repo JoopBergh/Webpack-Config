@@ -1,4 +1,5 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const paths = require('./paths');
 
@@ -22,6 +23,19 @@ module.exports = {
 
   module: {
     rules: [
+      {
+        test: /\.(s[ac]|c)ss$/i, // Stylesheets - SASS, SCSS & CSS
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              publicPath: '../',
+            },
+          },
+          'css-loader',
+          'sass-loader',
+        ],
+      },
       {
         test: /\.js$/i, // Babel - JavaScript compiler
         exclude: /node_module/,
