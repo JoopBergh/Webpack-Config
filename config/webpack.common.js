@@ -43,6 +43,14 @@ module.exports = {
         ],
       },
       {
+        test: /\.(jp(e)?g|png|svg|gif)$/i, // Images
+        // dependency: { not: ['url'] },
+        type: 'asset/resource',
+        generator: {
+          filename: './' + paths.images + '/[name][ext][query]',
+        },
+      },
+      {
         test: /\.js$/i, // Babel - JavaScript compiler
         exclude: /node_module/,
         use: {
