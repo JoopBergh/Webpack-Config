@@ -8,4 +8,19 @@ module.exports = {
     publicPath: '/',
     clean: true,
   },
+
+  module: {
+    rules: [
+      {
+        test: /\.js$/i, // Babel - JavaScript compiler
+        exclude: /node_module/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            configFile: './config/babel.config.js',
+          },
+        },
+      },
+    ],
+  },
 };
