@@ -24,6 +24,12 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.html$/i, // HTML
+        loader: 'html-loader',
+        options: {
+        },
+      },
+      {
         test: /\.(s[ac]|c)ss$/i, // Stylesheets - SASS, SCSS & CSS
         use: [
           {
@@ -44,7 +50,6 @@ module.exports = {
       },
       {
         test: /\.(jp(e)?g|png|svg|gif)$/i, // Images
-        // dependency: { not: ['url'] },
         type: 'asset/resource',
         generator: {
           filename: './' + paths.images + '/[name][ext][query]',
