@@ -15,4 +15,13 @@ module.exports = merge(common, {
       filename: paths.stylesheets + '/[name].[contenthash].css',
     }),
   ],
+
+  module: {
+    rules: [
+      {
+        test: /\.(woff(2)?|eot|ttf|otf)$/i, // Fonts
+        type: 'asset/inline',
+      },
+    ],
+  },
 });

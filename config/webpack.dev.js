@@ -14,4 +14,16 @@ module.exports = merge(common, {
       filename: paths.stylesheets + '/[name].css',
     }),
   ],
+
+  module: {
+    rules: [
+      {
+        test: /\.(woff(2)?|eot|ttf|otf)$/i, // Fonts
+        type: 'asset/resource',
+        generator: {
+          filename: paths.fonts + '/[name][ext][query]',
+        },
+      },
+    ],
+  },
 });
