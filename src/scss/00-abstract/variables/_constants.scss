@@ -1,0 +1,23 @@
+// ----------------------------------------------------------
+// Contains all SASS & CSS constants.
+// ----------------------------------------------------------
+
+
+// -------------------------
+// 0. Config
+// -------------------------
+
+/* Global */
+$grid-width: 36rem !default;
+
+/* Breakpoints */
+$breakpoints: (
+  small: 40rem,
+  medium: 67.5rem,
+  large: 80rem,
+ ) !default;
+
+/* Colors */
+$color-accent: coral !default;
+$color-text-100: #fff !default;
+$color-text-500: #303030 !default;

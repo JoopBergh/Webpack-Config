@@ -1,0 +1,30 @@
+@charset 'UTF-8';
+
+// 00. Configuration
+// @use ...
+
+// 01. Vendors
+// @use ...
+
+// 02. Base styling
+@use './02-base/reset';
+@use './02-base/base';
+@use './02-base/helpers';
+@use './02-base/typography';
+
+// 03. Layout-related sections
+@use './03-layout/header';
+@use './03-layout/navigation';
+@use './03-layout/footer';
+
+// 04. Components
+@use './04-components/buttons';
+
+// 05. Page-specific styling
+// @use ...
+
+// 06. Theme-specific styling
+// @use ...
+
+// Shame
+// @use './shame';

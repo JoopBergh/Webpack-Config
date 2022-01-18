@@ -1,0 +1,55 @@
+// ----------------------------------------------------------
+// Contains the reset styles rules.
+// ----------------------------------------------------------
+
+/* Box sizing rules  */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1, h2, h3,
+h4, h5, h6,
+p,
+ul, ol {
+  margin: 0;
+}
+
+/* Remove list styles */
+ol[role='list'],
+ul[role='list'] {
+  list-style: none;
+}
+
+/* Remove list padding if list is part of a nav */
+nav ul,
+nav ol {
+  padding: 0;
+}
+
+/* Set body rules */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Set image and video rules */
+img,
+picture,
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Inherit fonts */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}

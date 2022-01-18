@@ -1,0 +1,16 @@
+// ----------------------------------------------------------
+// Contains the helper classes.
+// ----------------------------------------------------------
+
+@use '../00-abstract/' as *;
+
+/* Container */
+.container {
+  width: $grid-width;;
+  @include align(center);
+  
+  .grid {
+    display: flex;
+    flex-direction: column;
+  }
+}
