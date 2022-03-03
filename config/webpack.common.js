@@ -9,7 +9,7 @@ module.exports = {
   output: {
     filename: paths.scripts + '/[name].bundle.js',
     path: paths.build,
-    publicPath: '/',
+    publicPath: '',
     clean: true,
   },
 
@@ -46,7 +46,7 @@ module.exports = {
         test: /\.(jp(e)?g|png|svg|gif)$/i, // Images
         type: 'asset/resource',
         generator: {
-          filename: './' + paths.images + '/[name][ext][query]',
+          filename: '.' + paths.images + '/[name][ext][query]',
         },
       },
       {
